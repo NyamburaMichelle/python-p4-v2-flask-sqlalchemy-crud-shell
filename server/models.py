@@ -19,3 +19,18 @@ class Pet(db.Model):
 
     def __repr__(self):
         return f'<Pet {self.id}, {self.name}, {self.species}>'
+
+#db.session.add(Pet)
+#db.session.commit()
+   #Pet.query.all()
+   #pet = db.session.get(Pet,1)
+   #
+   #
+   #
+   #
+
+
+
+
+
+

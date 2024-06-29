@@ -2,6 +2,7 @@
 
 from flask import Flask
 from flask_migrate import Migrate
+from models import Pet
 
 from models import db
 
@@ -19,6 +20,13 @@ migrate = Migrate(app, db)
 
 # initialize the Flask application to use the database
 db.init_app(app)
+
+
+@app.route('/')
+def index():
+    pet1= Pet.query.first()
+    print(pet1)
+    return str(pet1)
 
 
 if __name__ == '__main__':
